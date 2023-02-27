@@ -1,0 +1,223 @@
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    border-left: 1px solid #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #0e446c;
+        -webkit-box-shadow: inset 0 0 6px #0e446c;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0e446c;
+        -webkit-box-shadow: inset 0 0 6px #0e446c;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #0e446c;
+} 
+*{
+    margin:0;
+    padding:0;
+    scroll-behavior: smooth;
+}
+header{
+    width:100%;
+    height:50%;
+    overflow:hidden;
+}
+header figure img{
+    float:left;
+    width:20%;
+    height:50%;
+}
+header figure{
+    position:relative;
+    width:500%;
+    margin:0;
+    left:0;
+    animation:30s slider infinite alternate-reverse;
+}
+@keyframes slider{
+    0%{left:0%;}
+    20%{left:-100%;}
+    25%{left:-100%;}
+    45%{left:-200%;}
+    50%{left:-200%;}
+    70%{left:-300%;}
+    75%{left:-300%;}
+    95%{left:-400%;}
+    100%{left:-400%;}
+}
+nav{
+    height:100px;
+    background-color:black;
+    text-align:center;
+    line-height:100px;
+    position:sticky;
+    top:0;
+    z-index:2;
+}
+nav li{
+    display: inline;  
+}
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:30px;
+    font-size:1.5em;
+    font-weight:bold;
+}
+.sekcja1, .sekcja2, .sekcja3{
+    background-color:lightgrey;
+}
+.sekcja1 h2, .sekcja2 h2, .sekcja3 h2{
+    padding-left:100px;
+    padding-right:100px;
+    padding-top:100px;
+    padding-bottom:20px;
+    font-size:3em;
+    font-family: 'Oleo Script Swash Caps', cursive;
+}
+.sekcja1 p, .sekcja2 p, .sekcja3 p{
+    padding-left:100px;
+    padding-right:100px;
+    padding-top:20px;
+    padding-bottom:50px;
+    font-size:1.5em;
+    font-family: 'Lato', sans-serif;
+}
+.rozmiar {
+    width: 246.75px;
+    height: 480px;
+    margin: auto;
+    background-image: url("../img/szklanka.png");background-size:cover;
+    transition:all 2500ms ease;
+}
+.rozmiar:hover{
+    background-image: url("../img/szklanka2.png");background-size:cover;
+    transform:rotate(180deg);
+}
+.sekcja2>.galeria{
+    text-align: center;
+}
+.sekcja3>.efekty{
+    text-align: center;
+}
+
+footer{
+    height:100px;
+    background-color:black;
+    padding-bottom: 4px;;
+}
+.icons{
+    text-align:center;
+}
+.icons img{
+    width:50px;
+    padding-top:25px;
+}
+#parallax1{
+    height:40vh;
+    width:100%;
+    background-image:url("../img/tlo1.jpg");background-size:cover;
+    display:table;
+    background-attachment:fixed;
+}
+#parallax2{
+    height:60vh;
+    width:100%;
+    background-image:url("../img/tlo2.jpg");background-size:cover;
+    display:table;
+    background-attachment:fixed;
+}
+#parallax3{
+    height:80vh;
+    width:100%;
+    background-image:url("../img/tlo3.jpg");background-size:cover;
+    display:table;
+    background-attachment:fixed;
+}
+.obraz1{
+    transition: 1s ease;
+}
+.obraz1:hover{
+    filter:saturate(300%);
+    transform:scale(0.9);
+}
+.obraz2{
+    border:5px solid black;
+    transition: 1s ease;
+}
+.obraz2:hover{
+    filter:grayscale(80%);
+    border-radius:100%;
+}
+.obraz3{
+    transition: 1s ease;
+}
+.obraz3:hover{
+    filter:hue-rotate(190deg);
+    transform:rotate(360deg);
+}
+.obraz4{
+    transition: 1s ease;
+}
+.obraz4:hover{
+    transform:scale(1.2);
+    filter:invert(300%);
+    box-shadow:5px 5px 7px white;
+}
+.middle img{
+    width: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+.middle{
+    text-align: center;;
+}
+
+@media(max-width: 500px){
+    nav li{
+        padding: 15px;
+    }
+    nav a{
+        font-size: 1em;
+    }
+    .sekcja1 h2, .sekcja2 h2, .sekcja3 h2{
+        padding-left:50px;
+        padding-right:50px;
+        font-size:1.8em;
+    }
+    .sekcja1 p, .sekcja2 p, .sekcja3 p{
+        padding-left:50px;
+        padding-right:50px;
+        padding-top:10px;
+        font-size:1.2em;
+    }
+    .galeria img{
+        width: 200px;
+    }
+}
+
+@media(max-width: 800px) and (min-width:501px){
+    nav li{
+        padding: 15px;
+    }
+    nav a{
+        font-size: 1.2em;
+    }
+    .sekcja1 h2, .sekcja2 h2, .sekcja3 h2{
+        padding-left:75px;
+        padding-right:75px;
+        font-size:2em;
+    }
+    .sekcja1 p, .sekcja2 p, .sekcja3 p{
+        padding-left:75px;
+        padding-right:75px;
+        padding-top:15px;
+        font-size:1.4em;
+    }
+    .galeria img{
+        width: 250px;
+    }
+}
